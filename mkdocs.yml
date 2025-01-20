@@ -2,6 +2,7 @@ site_name: 贺老师的学习天地
 site_url: https://zh1995.github.io/cswiki/
 theme:
   name: material
+  language: zh
   palette:
     # Dark Mode
       - scheme: slate
@@ -18,11 +19,36 @@ theme:
           name: Light mode
         primary: blue
         accent: deep orange
+  features:
+    - navigation.footer
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - footnotes
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      name: Github
+      link: https://github.com/ZH1995/Cswiki/
+
+copyright: Copyright &copy; 2017 - 2025 ZH1995
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - i18n:
+      languages:
+        - locale: zh
+          default: true
+          name: 简体中文
+          build: true
+        - locale: en
+          name: English
+          build: true
 nav:
   - 前言: "index.md"
   - 必学工具:
