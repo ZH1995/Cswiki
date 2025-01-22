@@ -4,21 +4,20 @@ theme:
   name: material
   language: zh
   palette:
-    # Dark Mode
-      - scheme: slate
+    # Light Mode
+      - scheme: default
+        primary: light blue
+        accent: deep purple
         toggle:
           icon: material/weather-sunny
-          name: Dark mode
-        primary: green
+          name: Switch to dark mode
+    # Dark Mode
+      - scheme: slate
+        primary: cyan
         accent: deep purple
-        
-        # Light Mode
-      - scheme: default
         toggle:
           icon: material/weather-night
-          name: Light mode
-        primary: blue
-        accent: deep orange
+          name: Switch to light mode
   features:
     - navigation.footer
 markdown_extensions:
@@ -49,6 +48,18 @@ plugins:
         - locale: en
           name: English
           build: true
+          site_name: Teacher He's Study World
+          nav_translations:
+            前言: Foreword
+            必学工具: Productivity Toolkit
+            科学上网: GFW
+            好书推荐: Book Recommendation
+            编程入门: Fundamental Programming
+            Python 语言: Python Language
+            C 语言: C Language
+            计算机系统基础: Computer Systems Principles
+            数据库系统: Database Systems
+
 nav:
   - 前言: "index.md"
   - 必学工具:
@@ -65,4 +76,5 @@ nav:
   - 计算机系统基础:
       - "CMU 15-213: CSAPP": "计算机系统基础/CSAPP.md"
   - 数据库系统:
-      - "UCB CS186: Introduction to Database System": "数据库系统/CS186.md"
+      - "CMU 15-445: Database Systems": "数据库系统/CMU15445.md"
+      - "Stanford CS346: Database System Implementation": "数据库系统/CS346.md"
